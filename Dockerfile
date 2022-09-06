@@ -1,9 +1,9 @@
 FROM ubuntu:20.04
 
-LABEL org.opencontainers.image.title="Homebridge in Docker"
-LABEL org.opencontainers.image.description="Official Homebridge Docker Image"
-LABEL org.opencontainers.image.authors="oznu"
-LABEL org.opencontainers.image.url="https://github.com/oznu/docker-homebridge"
+LABEL org.opencontainers.image.title="Homebridge in Docker with Samba Tools"
+LABEL org.opencontainers.image.description="Unofficial Homebridge Docker Image"
+LABEL org.opencontainers.image.authors="alec"
+LABEL org.opencontainers.image.url="https://github.com/AlecWiese/docker-homebridge-samba"
 LABEL org.opencontainers.image.licenses="GPL-3.0"
 
 ENV S6_OVERLAY_VERSION=3.1.1.2 \
