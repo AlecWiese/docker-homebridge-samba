@@ -3,9 +3,9 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/oznu/homebridge.svg)](https://hub.docker.com/r/oznu/homebridge/)
 [![Discord](https://img.shields.io/discord/432663330281226270?color=728ED5&logo=discord&label=discord)](https://discord.gg/Cmq8a44)
 
-# Homebridge Docker Image
+# Homebridge Docker Image with Samba tools
 
-This Ubuntu Linux based Docker image allows you to run [Nfarina's](https://github.com/nfarina) [Homebridge](https://github.com/nfarina/homebridge) on your home network which emulates the iOS HomeKit API.
+Fork of Onzu's Ubuntu Linux based Docker image allows you to run [Nfarina's](https://github.com/nfarina) [Homebridge](https://github.com/nfarina/homebridge) on your home network which emulates the iOS HomeKit API.
 
 This is a multi-arch image and will run on x86_64, Raspberry Pi 2, 3, 4, Zero 2 W, or other Docker-enabled ARMv7/8 devices. Docker will automatically pull the correct image for your system.
 
@@ -80,9 +80,9 @@ Automated updates of the Homebridge Docker Image using tools such as Watchtower 
 
 ## Troubleshooting
 
-#### 1. Need ffmpeg?
+#### 1. What's Different from the Official Image?
 
-ffmpeg, with `libfdk-aac` audio support is included in this image.
+The official image includes ffmpeg, with `libfdk-aac` audio support. I've added samabe so you can send "net" commands to remotely control a windows computer
 
 #### 2. Container will not start on older versions of Raspbian
 
@@ -106,13 +106,10 @@ homebridge    | # Fatal error in , line 0
 homebridge    | # unreachable code
 ```
 
-#### 3. Ask on Discord
-
-Join the [Official Homebridge Discord](https://discord.gg/Cmq8a44) community and ask in the [#docker](https://discord.gg/Cmq8a44) channel.
 
 ## License
 
-Copyright (C) 2017-2022 oznu
+Copyright (C) 2017-2022 Alec
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
