@@ -19,7 +19,7 @@ ENV S6_OVERLAY_VERSION=3.1.1.2 \
 
 RUN set -x \
   && apt-get update \
-  && apt-get install -y curl samba-common-bin wget tzdata locales psmisc procps iputils-ping logrotate \
+  && apt-get install -y curl wget tzdata locales psmisc procps iputils-ping logrotate \
     libatomic1 apt-transport-https apt-utils jq openssl sudo nano net-tools \
   && locale-gen en_US.UTF-8 \
   && ln -snf /usr/share/zoneinfo/Etc/GMT /etc/localtime && echo Etc/GMT > /etc/timezone \
