@@ -1,10 +1,11 @@
-[![Donate](https://img.shields.io/badge/donate-paypal-yellowgreen.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZEW8TFQCU2MSJ&source=url)
-[![Docker Build Status](https://github.com/oznu/docker-homebridge/workflows/Build/badge.svg)](https://github.com/oznu/docker-homebridge/actions)
-[![Docker Pulls](https://img.shields.io/docker/pulls/oznu/homebridge.svg)](https://hub.docker.com/r/oznu/homebridge/)
+I added 1 package to this docker image, becasue I needed it to be able to send remote sleep/shutdown commands my windows PC. I take no credit for all the hard work other people have done to make the actual homebridge app and docker image. 
+
+[![Docker Build Status](https://github.com/oznu/docker-homebridge/workflows/Build/badge.svg)](https://github.com/AlecWiese/docker-homebridge-samba/actions)
+
 
 # Homebridge Docker Image with Samba tools
 
-Fork of Onzu's Ubuntu Linux based Docker image allows you to run [Nfarina's](https://github.com/nfarina) [Homebridge](https://github.com/nfarina/homebridge) on your home network which emulates the iOS HomeKit API.
+Fork of Onzu's Ubuntu Linux based Docker image, that includes Samba tools. Allows you to run [Nfarina's](https://github.com/nfarina) [Homebridge](https://github.com/nfarina/homebridge) on your home network which emulates the iOS HomeKit API. with samba tools to allow commandline communication to a Windows computer.
 
 This is a multi-arch image and will run on x86_64, Raspberry Pi 2, 3, 4, Zero 2 W, or other Docker-enabled ARMv7/8 devices. Docker will automatically pull the correct image for your system.
 
@@ -17,6 +18,7 @@ This is a multi-arch image and will run on x86_64, Raspberry Pi 2, 3, 4, Zero 2 
 - [Running Homebridge with Docker on Linux](https://github.com/homebridge/homebridge/wiki/Install-Homebridge-on-Docker)
 - [Running Homebridge on a Synology NAS](https://github.com/oznu/docker-homebridge/wiki/Homebridge-on-Synology)
 - [Running Homebridge on Unraid](https://github.com/oznu/docker-homebridge/wiki/Homebridge-on-Unraid)
+- [Running Homebridge on TrueNas Scale](https://github.com/oznu/docker-homebridge/wiki/Homebridge-on-TrueNAS-Scale)
 
 ## Compatibility
 
