@@ -10,7 +10,7 @@ jobs:
 
     steps:
     # checkout repo
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     # setup multi-arch build support
     - name: Install Dependencies
@@ -57,14 +57,8 @@ jobs:
         docker buildx create --name multibuilder
         docker buildx use multibuilder
 
-    # build the image for Docker Hub
-    - name: Build Image For Docker Hub
-      run: |
-        docker buildx build --push -f Dockerfile --platform linux/amd64,linux/arm/v7,linux/arm64 -t oznu/homebridge:${{ steps.get_alt_tag.outputs.NAME }} .
-        docker buildx build --push -f Dockerfile --platform linux/amd64,linux/arm/v7,linux/arm64 -t oznu/homebridge:${{ steps.get_tag.outputs.NAME }} .
-
     # build the image for Github Container Registry (will use the cached build from the previous step)
     - name: Build Image For Docker Hub
       run: |
-        docker buildx build --push -f Dockerfile --platform linux/amd64,linux/arm/v7,linux/arm64 -t ghcr.io/oznu/homebridge:${{ steps.get_alt_tag.outputs.NAME }} .
-        docker buildx build --push -f Dockerfile --platform linux/amd64,linux/arm/v7,linux/arm64 -t ghcr.io/oznu/homebridge:${{ steps.get_tag.outputs.NAME }} .
+        docker buildx build --push -f Dockerfile --platform linux/amd64,linux/arm/v7,linux/arm64 -t ghcr.io/AlecWiese/docker-homebridge-samba:${{ steps.get_alt_tag.outputs.NAME }} .
+        docker buildx build --push -f Dockerfile --platform linux/amd64,linux/arm/v7,linux/arm64 -t ghcr.io/AlecWiese/docker-homebridge-samba:${{ steps.get_tag.outputs.NAME }} .
